@@ -76,9 +76,9 @@ java Main
 ### Development Team
 | Name | Link To Github Profile |
 |------|---------------|
-| [Asi Eric Daniel] | [[GitHub Profile Link](https://github.com/azzi-xx)] |
-| [De Villa Matt Ervin] | [[GitHub Profile Link](https://github.com/mattyyy06)] |
-| [Jun Andrei Manalo] | [[GitHub Profile Link](https://github.com/itsmekurt652)] |
+| Asi Eric Daniel | [[GitHub Profile Link](https://github.com/azzi-xx)] |
+| De Villa Matt Ervin | [[GitHub Profile Link](https://github.com/mattyyy06)] |
+| Jun Andrei Manalo | [[GitHub Profile Link](https://github.com/itsmekurt652)] |
 
 
 
