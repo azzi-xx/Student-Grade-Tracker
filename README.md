@@ -1,50 +1,91 @@
-# Student Grade Tracker System
+### Project Title:
+## 🎓 Student Grade Tracker System
 
-## 1. Project Title
-**Student Grade Tracker System** - A Comprehensive Academic Management Console Application
+# 📋 Description/Overview
+The Student Grade Tracker System is a console-based Java application designed to manage and monitor student academic performance. It provides teachers and administrators with a digital solution to record, analyze, and report student grades across multiple courses. The system supports weighted grading, grade predictions, and data persistence, making it an essential tool for efficient academic management.
 
-## 2. Description/Overview
-The Student Grade Tracker System is a console-based Java application designed to manage and track student academic performance. It serves as a digital replacement for traditional grade books, providing teachers and academic administrators with a powerful tool to record, analyze, and report on student grades across multiple courses.
+# 🧮 OOP Concepts Applied
 
-**Key Features:**
-- Student and course management with unique identifiers
-- Weighted grading systems (homework, quizzes, exams, projects)
-- Grade prediction and "what-if" scenario analysis
-- Database persistence with automatic save/load functionality
-- Comprehensive reporting and search capabilities
-- CSV export for compatibility with spreadsheet software
+## 🔒 Encapsulation
+Encapsulation was implemented by making all instance variables private and providing public getter methods. In the `Student` class, the `srCode`, `name`, `major`, and grades Map are private, ensuring data integrity and controlled access.
 
-**Problem Solved:**
-This system eliminates the manual calculation errors, disorganization, and data loss risks associated with paper-based or spreadsheet grade tracking. It provides a structured, reliable way to manage academic data throughout an entire semester or academic year.
+## 🎭 Abstraction
+Abstraction was achieved through simplified interfaces like the menu system in `Main.java`. Users interact with options like "Add Grade" without needing to know the complex calculations happening in the `GradeTracker` class.
 
-## 3. OOP Concepts Applied
+## 👨‍👦 Inheritance
+Inheritance was not extensively used in this project, but the structure allows for future extensions. For example, different types of students or courses could inherit from base classes in later versions.
 
-### Encapsulation
-- **Student Class**: Bundles student data (SR Code, name, major) with grade management methods
-- **Course Class**: Encapsulates course details and grading weights with controlled access
-- **GradeTracker Class**: Manages the overall system while hiding internal data structures
-- **Private fields** with public getter methods maintain data integrity
+## 🔄 Polymorphism
+Polymorphism was implemented through method overloading in the `addGrade()` methods and the use of Java Collections. The system uses `List<Double>` and `Map<String, Student>` to handle different data types flexibly.
 
-### Abstraction
-- **GradeTracker** provides a simplified interface for complex operations like weighted grade calculation
-- **Student** class abstracts the complexity of grade storage and averaging
-- Users interact with high-level menu options without needing to understand internal algorithms
+### 🏗️ Program Structure
 
-### Inheritance
-- While not extensively used in this basic version, the structure allows for easy extension:
-  - Potential for `UndergraduateStudent` and `GraduateStudent` subclasses
-  - Possible `ElectiveCourse` and `CoreCourse` hierarchy
+## Main Classes and Their Roles
 
-### Polymorphism
-- **Method Overloading**: Multiple `addGrade()` methods handle different parameter sets
-- **Collections Framework**: Uses polymorphic collections (List<>, Map<>) for flexible data storage
-- **Stream Operations**: Utilizes Java streams for operations like average calculation
+# **1. 🖥️ Main.java**
+The main entry point of the application that handles user interaction. It displays the menu system, captures user input, and calls the appropriate methods from the GradeTracker class. This class acts as the user interface layer.
 
-### Composition
-- **GradeTracker** is composed of `Map<String, Student>` and `Map<String, Course>`
-- **Student** contains `Map<String, Map<String, List<Double>>>` for grade organization
-- This "has-a" relationship allows for complex data structures while maintaining separation of concerns
+# **2. ⚙️ GradeTracker.java**
+The controller class that manages all core operations. It handles student and course management, grade calculations, data persistence (save/load), and reporting functionality. This class contains the main business logic of the application.
 
-## 4. Program Structure
+# **3. 👨‍🎓 Student.java**
+The data model representing individual students. It stores student information (SR Code, name, major) and manages their grades using nested data structures. This class also calculates weighted averages for each course.
 
-### Class Relationships:
+# **4. 📚 Course.java**
+The data model representing academic courses. It stores course details (code, name, credits) and defines the grading weight system for different assignment types (homework, quizzes, exams, projects).
+
+### 🚀 How to Run the Program
+
+## Prerequisites
+- ✅ Java Development Kit (JDK) 8 or higher installed
+- ✅ Command line/terminal access
+- ✅ Project files organized in a folder structure
+
+## **Step-by-Step Instructions**
+
+### **Step 1: Organize The Files**
+Create a folder structure with your Java files:
+
+StudentGradeTracker/
+-Main.java
+-GradeTracker.java
+-Student.java
+-Course.java
+  
+
+## **Step 2: Open Command Line**
+- **Windows**: Open Command Prompt or PowerShell
+- **Mac/Linux**: Open Terminal
+
+## **Step 3: Navigate to Your Project Folder**
+```bash
+cd path/to/your/StudentGradeTracker
+```
+## **Step 4: Compile All Java Files**
+javac *.java
+
+## **Run the Program**
+java Main
+
+### Sample Output of the Program 
+
+<img width="523" height="353" alt="image" src="https://github.com/user-attachments/assets/24ff6fe3-849b-4108-8543-9b826438cceb" />
+
+## Author and Acknowledgement
+
+### Development Team
+| Name | Link To Github Profile |
+|------|---------------|
+| [Asi Eric Daniel] | [[GitHub Profile Link](https://github.com/azzi-xx)] |
+| [De Villa Matt Ervin] | [[GitHub Profile Link](https://github.com/mattyyy06)] |
+| [Jun Andrei Manalo] | [[GitHub Profile Link](https://github.com/itsmekurt652)] |
+
+
+
+
+
+
+
+
+
+
