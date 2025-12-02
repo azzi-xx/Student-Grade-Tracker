@@ -1,0 +1,133 @@
+Grade Tracking System
+
+A console-based Java application for managing students, courses, enrollments, grades, reports, and persistent data storage**.
+
+This system allows schools, teachers, and students to track academic performance efficiently with features such as grade calculation, reporting, database viewing, and CSV export
+
+Features Overview
+
+8. View Database
+9. Search Database
+10. Save Data
+11. Load Data
+12. Export Student Report
+13. Exit Program
+
+Feature Explanations
+
+View Database
+Menu Option: 8
+Location: `Main.java → viewDatabase()`
+
+The Virew Database menu provides an overview of all stored students and courses.
+
+Sub-Options
+
+1. View All Courses - Lists all courses with credits and number of enrolled students. Includes optional detailed view with grading weights and enrolled student names.
+
+2. View All Students - Shows every student with SR Code, name, major, and number of enrolled courses. Optional detailed summaries include grades per course. 
+
+3. Database Overview - Displays statistics: total students, total courses, total enrollments, average courses per student, and top 3 most popular courses. 
+
+4. Back - Returns to the main menu.                                                                                                                         
+Purpose
+Provides a fast, readable way to inspect database contents.
+Great for administrators performing audits or quick checks.
+
+Search Database
+Menu Option: 9
+Location: `GradeTracker.java → searchDatabase()`
+
+Allows keyword-based searching across courses and students.
+
+Search Options
+
+| Option        | Searches                         |
+| --------------| -------------------------------- |
+| 1. Courses    | Matches course code or name.     |
+| 2. Students   | Matches SR-Code, name, or major. |
+
+How It Works?
+
+- Converts input to lowercase
+- Checks database fields for partial matches
+- Displays all matching records
+
+Purpose
+Makes it easy to find specific data in large datasets—ideal for registrars and instructors.
+
+Save Data
+Menu Option: 10
+Location: `GradeTracker.java → saveAllData()`
+
+Saves all system data so progress is never lost.
+
+Files Saved to `/data`
+
+| File              | Contains                        |
+| ----------------- | ------------------------------- |
+|  students.dat     | Serialized student objects      |
+|  courses.dat      | Serialized course objects       |
+|  enrollments.csv  | Enrollments (Student ↔ Course)  |
+|  grades.csv       | All student grades              |
+| courses.csv       | Course details + weight schemes |
+
+Purpose
+Ensures all academic information persists after closing the program.
+
+Load Data
+Menu Option: 11
+Location: `GradeTracker.java → loadAllData()`
+
+Loads previously saved files from the `/data` folder.
+What Gets Restored
+- List of students
+- Courses
+- Enrollments
+- Grades
+- Assignment names
+- Grading weights
+
+Purpose
+Restores the exact state of the system from the last save—ideal for long-term or repeated usage.
+
+Export Report
+Menu Option: 12
+Location: `GradeTracker.java → exportStudentReport()`
+
+Exports a detailed student performance report to a text file.
+Report Includes
+- Student info (Name, SR-Code, Major)
+- All enrolled courses
+- Final numerical & letter grades
+- Assignment category breakdowns and averages
+
+Example Output
+
+STUDENT REPORT
+==============
+Name: John Doe
+SR Code: SR-001
+Major: BSIT
+
+       COURSES AND GRADES:
+=================================
+CS101 - Programming 1: 92.50% (A)
+  Homework: 88.00% (4 assignments)
+  Exams: 95.00% (2 assignments)
+
+Purpose
+Creates printable, shareable academic reports.
+
+Exit
+Menu Option: 13
+Location: `Main.java → case 13`
+
+What Happens When Exiting
+- System automatically saves all data
+- Displays “Goodbye!”
+- Program closes safely
+
+Purpose
+Protects the user from accidental data loss.
+
