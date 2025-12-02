@@ -1,5 +1,4 @@
-# Project Title:
-## 🎓 Student Grade Tracker System
+# Project Title: 🎓 Student Grade Tracker System
 
 # 📋 Description/Overview
 The Student Grade Tracker System is a console-based Java application designed to manage and monitor student academic performance. It provides teachers and administrators with a digital solution to record, analyze, and report student grades across multiple courses. The system supports weighted grading, grade predictions, and data persistence, making it an essential tool for efficient academic management.
