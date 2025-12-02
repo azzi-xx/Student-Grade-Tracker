@@ -1,4 +1,4 @@
-### Project Title:
+# Project Title:
 ## 🎓 Student Grade Tracker System
 
 # 📋 Description/Overview
@@ -6,35 +6,35 @@ The Student Grade Tracker System is a console-based Java application designed to
 
 # 🧮 OOP Concepts Applied
 
-## 🔒 Encapsulation
+### 🔒 Encapsulation
 Encapsulation was implemented by making all instance variables private and providing public getter methods. In the `Student` class, the `srCode`, `name`, `major`, and grades Map are private, ensuring data integrity and controlled access.
 
-## 🎭 Abstraction
+### 🎭 Abstraction
 Abstraction was achieved through simplified interfaces like the menu system in `Main.java`. Users interact with options like "Add Grade" without needing to know the complex calculations happening in the `GradeTracker` class.
 
-## 👨‍👦 Inheritance
+### 👨‍👦 Inheritance
 Inheritance was not extensively used in this project, but the structure allows for future extensions. For example, different types of students or courses could inherit from base classes in later versions.
 
-## 🔄 Polymorphism
+### 🔄 Polymorphism
 Polymorphism was implemented through method overloading in the `addGrade()` methods and the use of Java Collections. The system uses `List<Double>` and `Map<String, Student>` to handle different data types flexibly.
 
-### 🏗️ Program Structure
+# 🏗️ Program Structure
 
 ## Main Classes and Their Roles
 
-# **1. 🖥️ Main.java**
+## **1. 🖥️ Main.java**
 The main entry point of the application that handles user interaction. It displays the menu system, captures user input, and calls the appropriate methods from the GradeTracker class. This class acts as the user interface layer.
 
-# **2. ⚙️ GradeTracker.java**
+## **2. ⚙️ GradeTracker.java**
 The controller class that manages all core operations. It handles student and course management, grade calculations, data persistence (save/load), and reporting functionality. This class contains the main business logic of the application.
 
-# **3. 👨‍🎓 Student.java**
+## **3. 👨‍🎓 Student.java**
 The data model representing individual students. It stores student information (SR Code, name, major) and manages their grades using nested data structures. This class also calculates weighted averages for each course.
 
-# **4. 📚 Course.java**
+## **4. 📚 Course.java**
 The data model representing academic courses. It stores course details (code, name, credits) and defines the grading weight system for different assignment types (homework, quizzes, exams, projects).
 
-### 🚀 How to Run the Program
+# 🚀 How to Run the Program
 
 ## Prerequisites
 - ✅ Java Development Kit (JDK) 8 or higher installed
@@ -67,11 +67,11 @@ javac *.java
 ## **Run the Program**
 java Main
 
-### Sample Output of the Program 
+# 📊 Sample Output of the Program 
 
 <img width="523" height="353" alt="image" src="https://github.com/user-attachments/assets/24ff6fe3-849b-4108-8543-9b826438cceb" />
 
-## Author and Acknowledgement
+## 👥Contributors
 
 ### Development Team
 | Name | Link To Github Profile |
