@@ -1,0 +1,41 @@
+## **1. Add Student**
+
+The “Add Student” option allows the user to register a new student in the system by entering a unique student ID and the student’s full name. Internally, the program creates a new student object and stores it in memory. If the student ID is left empty or already exists, the program displays an error message such as `Error: Student ID cannot be empty` or `Error: Student ID already exists`, ensuring that each student has a unique identifier. This makes it easy to manage students without duplication.
+
+---
+
+## **2. Add Course**
+
+The “Add Course” option lets the user create a new course by providing the course code, course name, number of credits, and a weight scheme. The weight scheme determines how grades are distributed among assignment types. Specifically, scheme 1 assigns Homework (20%), Quizzes (30%), and Exams (50%), scheme 2 assigns Projects (40%) and Exams (60%), and scheme 3 leaves the course without any predefined assignment types. Any invalid scheme defaults to a single “Assignments” category at 100%. If the course code or name is empty, if credits are non-numeric or less than 1, or if the weight scheme is invalid, the program displays appropriate error messages such as `Error: Course code and name cannot be empty`, `Error: Credits must be a number`, `Error: Credits must be greater than 0`, or `Error: Weight scheme invalid. Defaulting to single assignment`. This ensures that courses are created correctly and are ready for enrollment.
+
+---
+
+## **3. Enroll Student**
+
+The “Enroll Student” option allows a student to be enrolled in one or more courses. The user is prompted to enter the student ID and the course code(s) for enrollment. The program checks that both the student and course exist in the system and prevents duplicate enrollments. If the student ID or course code is empty, if the student does not exist, if the course does not exist, or if the student is already enrolled in the course, the program displays error messages such as `Error: Student ID cannot be empty`, `Error: Student ID [ID] does not exist`, `Error: Course code cannot be empty`, `Error: Course code [code] does not exist`, or `Error: Student is already enrolled in this course`. This ensures all enrollments are valid and consistent.
+
+---
+
+## **4. Add Grade**
+
+The “Add Grade” option allows the user to record grades for a student in a specific course. The program prompts for the student ID, course code, assignment type, and the grade value. It verifies that the student is enrolled in the course and that the assignment type exists in the course’s `assignmentWeights` map. Invalid inputs, such as empty student ID, unregistered student, invalid course code, non-existent assignment type, or grades that are non-numeric or out of range, result in messages like `Error: Student [ID] is not enrolled in course [code]`, `Error: Assignment type [type] does not exist for this course`, or `Error: Grade must be between 0 and 100`. This ensures all grades are recorded correctly according to the course grading scheme.
+
+---
+
+## **5. View Student Report**
+
+The “View Student Report” option displays a detailed report for a student, including all enrolled courses, grades for each assignment type, and overall course averages. The user is prompted to enter the student ID, and the program retrieves all relevant courses and calculates weighted grades using the assignment weights defined in the `Course` class. If the student ID is empty, the student does not exist, or the student has no course enrollments, the program shows messages such as `Error: Student ID [ID] does not exist` or `No courses enrolled for student [ID]`. This provides a clear summary of the student’s academic performance.
+
+---
+
+## **6. View Course Report**
+
+The “View Course Report” option allows the user to view all students enrolled in a specific course along with their grades for each assignment type and the overall course average. The user enters the course code, and the program verifies that the course exists and that students are enrolled. If the course code is empty, the course does not exist, or no students are enrolled, the program displays messages such as `Error: Course code [code] does not exist` or `No students enrolled in course [code]`. This feature helps monitor overall performance for a course.
+
+---
+
+## **7. Grade Predictor**
+
+The “Grade Predictor” option estimates a student’s final grade in a course based on currently recorded grades and the course’s assignment weight scheme. The user provides the student ID and course code, and the program calculates the projected final grade by multiplying each assignment grade by its weight and summing the results. Possible errors include empty student ID or course code, non-existent student or course, student not enrolled in the course, or no grades recorded, with messages such as `Error: Student [ID] is not enrolled in course [code]` or `Error: No grades available for prediction`. This feature allows students and instructors to anticipate outcomes and make adjustments if necessary.
+
+---
